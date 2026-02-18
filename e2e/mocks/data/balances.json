@@ -1,0 +1,12 @@
+{
+  "items": [
+    { "asset": "BTC", "available": "1.50000000", "trading": "0.00000000" },
+    { "asset": "ETH", "available": "25.000000", "trading": "0.000000" },
+    { "asset": "USD", "available": "50000.00", "trading": "0.00" },
+    { "asset": "USDP", "available": "10000.00", "trading": "0.00" },
+    { "asset": "PYUSD", "available": "5000.00", "trading": "0.00" },
+    { "asset": "USDG", "available": "8000.00", "trading": "0.00" },
+    { "asset": "USDL", "available": "3000.00", "trading": "0.00" },
+    { "asset": "PAXG", "available": "2.500000", "trading": "0.000000" }
+  ]
+}

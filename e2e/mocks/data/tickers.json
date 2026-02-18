@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "market": "BTCUSD",
+      "best_bid": { "price": "67500.00" },
+      "best_ask": { "price": "67550.00" },
+      "snapshot_at": "2025-01-15T12:00:00Z",
+      "today": {
+        "open": "66800.00",
+        "high": "68100.00",
+        "low": "66500.00",
+        "volume": "12453.78"
+      }
+    },
+    {
+      "market": "ETHUSD",
+      "best_bid": { "price": "3245.00" },
+      "best_ask": { "price": "3255.00" },
+      "snapshot_at": "2025-01-15T12:00:00Z",
+      "today": {
+        "open": "3190.00",
+        "high": "3310.00",
+        "low": "3170.00",
+        "volume": "98234.12"
+      }
+    },
+    {
+      "market": "PAXGUSD",
+      "best_bid": { "price": "2048.00" },
+      "best_ask": { "price": "2054.00" },
+      "snapshot_at": "2025-01-15T12:00:00Z",
+      "today": {
+        "open": "2040.00",
+        "high": "2065.00",
+        "low": "2035.00",
+        "volume": "4521.56"
+      }
+    }
+  ]
+}

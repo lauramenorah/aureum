@@ -1,0 +1,39 @@
+{
+  "items": [
+    {
+      "id": "order-001",
+      "market": "BTCUSD",
+      "side": "BUY",
+      "type": "LIMIT",
+      "amount": "0.5",
+      "price": "65000.00",
+      "status": "OPEN",
+      "time_in_force": "GTC",
+      "created_at": "2025-01-14T10:00:00Z"
+    },
+    {
+      "id": "order-002",
+      "market": "ETHUSD",
+      "side": "SELL",
+      "type": "MARKET",
+      "amount": "2.0",
+      "base_amount": "2.0",
+      "quote_amount": "6500.00",
+      "price": "3250.00",
+      "status": "FILLED",
+      "time_in_force": "IOC",
+      "created_at": "2025-01-13T08:00:00Z"
+    },
+    {
+      "id": "order-003",
+      "market": "BTCUSD",
+      "side": "BUY",
+      "type": "LIMIT",
+      "amount": "0.1",
+      "price": "60000.00",
+      "status": "CANCELLED",
+      "time_in_force": "GTC",
+      "created_at": "2025-01-12T14:00:00Z"
+    }
+  ]
+}

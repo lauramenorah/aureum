@@ -1,0 +1,43 @@
+{
+  "items": [
+    {
+      "id": "transfer-001",
+      "type": "CRYPTO_DEPOSIT",
+      "asset": "BTC",
+      "amount": "0.005",
+      "status": "COMPLETED",
+      "direction": "CREDIT",
+      "fee": "0",
+      "destination_address": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh",
+      "profile_id": "profile-001",
+      "created_at": "2025-01-15T10:00:00Z",
+      "updated_at": "2025-01-15T10:05:00Z"
+    },
+    {
+      "id": "transfer-002",
+      "type": "FIAT_WITHDRAWAL",
+      "asset": "USD",
+      "amount": "500.00",
+      "status": "PENDING",
+      "direction": "DEBIT",
+      "fee": "25.00",
+      "destination_address": "",
+      "profile_id": "profile-001",
+      "created_at": "2025-01-15T08:00:00Z",
+      "updated_at": "2025-01-15T08:00:00Z"
+    },
+    {
+      "id": "transfer-003",
+      "type": "INTERNAL_TRANSFER",
+      "asset": "ETH",
+      "amount": "1.5",
+      "status": "COMPLETED",
+      "direction": "DEBIT",
+      "fee": "0",
+      "destination_address": "profile-002",
+      "profile_id": "profile-001",
+      "created_at": "2025-01-14T16:00:00Z",
+      "updated_at": "2025-01-14T16:00:00Z"
+    }
+  ]
+}

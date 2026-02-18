@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "id": "conv-001",
+      "from_asset": "USD",
+      "to_asset": "USDP",
+      "amount": "1000.00",
+      "status": "COMPLETED",
+      "created_at": "2025-01-14T12:00:00Z"
+    },
+    {
+      "id": "conv-002",
+      "from_asset": "USDP",
+      "to_asset": "PYUSD",
+      "amount": "500.00",
+      "status": "COMPLETED",
+      "created_at": "2025-01-13T09:00:00Z"
+    }
+  ]
+}

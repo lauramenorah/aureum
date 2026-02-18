@@ -1,0 +1,11 @@
+{
+  "items": [
+    {
+      "id": "account-001",
+      "type": "INDIVIDUAL",
+      "status": "ACTIVE",
+      "identity_id": "identity-001",
+      "created_at": "2025-01-01T00:00:00Z"
+    }
+  ]
+}

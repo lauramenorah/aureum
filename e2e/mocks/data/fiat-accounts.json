@@ -1,0 +1,15 @@
+{
+  "items": [
+    {
+      "id": "fiat-001",
+      "fiat_account_id": "fiat-001",
+      "bank_name": "Chase Bank",
+      "beneficiary_name": "Test User",
+      "account_number": "123456789",
+      "routing_number": "021000021",
+      "account_type": "CHECKING",
+      "status": "ACTIVE",
+      "created_at": "2025-01-01T00:00:00Z"
+    }
+  ]
+}

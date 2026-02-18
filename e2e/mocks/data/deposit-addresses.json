@@ -1,0 +1,18 @@
+{
+  "items": [
+    {
+      "id": "addr-001",
+      "asset": "BTC",
+      "crypto_network": "BITCOIN",
+      "address": "bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh",
+      "created_at": "2025-01-10T00:00:00Z"
+    },
+    {
+      "id": "addr-002",
+      "asset": "ETH",
+      "crypto_network": "ETHEREUM",
+      "address": "0x742d35Cc6634C0532925a3b844Bc9e7595f1dE28",
+      "created_at": "2025-01-11T00:00:00Z"
+    }
+  ]
+}

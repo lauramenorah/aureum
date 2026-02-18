@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "id": "identity-001",
+      "status": "APPROVED",
+      "type": "INDIVIDUAL",
+      "first_name": "Test",
+      "last_name": "User",
+      "email": "test@example.com",
+      "created_at": "2025-01-01T00:00:00Z",
+      "updated_at": "2025-01-02T00:00:00Z"
+    }
+  ]
+}

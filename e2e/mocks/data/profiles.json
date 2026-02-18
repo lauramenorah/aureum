@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "id": "profile-001",
+      "nickname": "Main Profile",
+      "type": "INDIVIDUAL",
+      "status": "ACTIVE",
+      "account_id": "account-001",
+      "created_at": "2025-01-01T00:00:00Z"
+    },
+    {
+      "id": "profile-002",
+      "nickname": "Trading Profile",
+      "type": "INDIVIDUAL",
+      "status": "ACTIVE",
+      "account_id": "account-001",
+      "created_at": "2025-01-05T00:00:00Z"
+    }
+  ]
+}
