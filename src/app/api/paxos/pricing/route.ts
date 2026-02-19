@@ -29,9 +29,14 @@ export async function GET(request: NextRequest) {
       }
     });
 
-    const path = endpoint === 'historical_prices'
-      ? '/pricing/historical-prices'
-      : `/pricing/${endpoint}`;
+    let path: string;
+    if (endpoint === 'historical_prices') {
+      path = '/pricing/historical-prices';
+    } else if (endpoint === 'tickers') {
+      path = '/market/tickers';
+    } else {
+      path = `/pricing/${endpoint}`;
+    }
 
     const data = await paxos.get(path, params);
     return NextResponse.json(data);

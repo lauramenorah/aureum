@@ -27,6 +27,7 @@ import {
   type AssetKey,
 } from '@/lib/utils/assets';
 import type { StablecoinConversion, Quote } from '@/lib/paxos/types';
+import { useStore } from '@/store/useStore';
 
 // ─── Constants ──────────────────────────────────────────────────────────────
 
@@ -147,6 +148,7 @@ function AssetSelector({
 
 export default function ConvertPage() {
   const queryClient = useQueryClient();
+  const profileId = useStore((s) => s.activeProfile?.id);
 
   // ── Tab state ────────────────────────────────────────────────────────────
   const [tab, setTab] = useState<ConvertTab>('stablecoin');
@@ -207,7 +209,12 @@ export default function ConvertPage() {
       const res = await fetch('/api/paxos/stablecoin-conversions', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
+        body: JSON.stringify({
+          profile_id: profileId,
+          source_asset: payload.from_asset,
+          target_asset: payload.to_asset,
+          amount: payload.amount,
+        }),
       });
       if (!res.ok) {
         const err = await res.json();
@@ -492,14 +499,14 @@ export default function ConvertPage() {
                             <span className="text-[#8892B0]">From</span>
                             <span className="text-white font-mono">
                               {conversionResult.amount}{' '}
-                              {conversionResult.from_asset}
+                              {conversionResult.source_asset || conversionResult.from_asset}
                             </span>
                           </div>
                           <div className="flex justify-between">
                             <span className="text-[#8892B0]">To</span>
                             <span className="text-white font-mono">
                               {conversionResult.amount}{' '}
-                              {conversionResult.to_asset}
+                              {conversionResult.target_asset || conversionResult.to_asset}
                             </span>
                           </div>
                           <div className="flex justify-between">
@@ -749,18 +756,18 @@ export default function ConvertPage() {
                               className="h-6 w-6 rounded-full flex items-center justify-center text-white text-[10px] font-bold"
                               style={{
                                 backgroundColor:
-                                  ASSETS[c.from_asset as AssetKey]?.color ||
+                                  ASSETS[(c.source_asset || c.from_asset) as AssetKey]?.color ||
                                   '#7B5EA7',
                               }}
                             >
-                              {c.from_asset.slice(0, 2)}
+                              {(c.source_asset || c.from_asset).slice(0, 2)}
                             </div>
                             <div>
                               <p className="text-white font-mono text-sm">
-                                {formatAmount(c.amount, c.from_asset)}
+                                {formatAmount(c.amount, (c.source_asset || c.from_asset))}
                               </p>
                               <p className="text-xs text-[#4A5568]">
-                                {c.from_asset}
+                                {(c.source_asset || c.from_asset)}
                               </p>
                             </div>
                           </div>
@@ -774,18 +781,18 @@ export default function ConvertPage() {
                               className="h-6 w-6 rounded-full flex items-center justify-center text-white text-[10px] font-bold"
                               style={{
                                 backgroundColor:
-                                  ASSETS[c.to_asset as AssetKey]?.color ||
+                                  ASSETS[(c.target_asset || c.to_asset) as AssetKey]?.color ||
                                   '#7B5EA7',
                               }}
                             >
-                              {c.to_asset.slice(0, 2)}
+                              {(c.target_asset || c.to_asset).slice(0, 2)}
                             </div>
                             <div>
                               <p className="text-white font-mono text-sm">
-                                {formatAmount(c.amount, c.to_asset)}
+                                {formatAmount(c.amount, (c.target_asset || c.to_asset))}
                               </p>
                               <p className="text-xs text-[#4A5568]">
-                                {c.to_asset}
+                                {(c.target_asset || c.to_asset)}
                               </p>
                             </div>
                           </div>

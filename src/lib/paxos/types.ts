@@ -156,8 +156,10 @@ export interface QuoteExecution {
 export interface StablecoinConversion {
   id: string;
   profile_id: string;
-  from_asset: Asset;
-  to_asset: Asset;
+  source_asset: Asset;
+  target_asset: Asset;
+  from_asset?: Asset;
+  to_asset?: Asset;
   amount: string;
   status: string;
   created_at: string;

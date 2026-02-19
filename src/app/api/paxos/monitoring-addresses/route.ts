@@ -12,6 +12,10 @@ export async function GET(request: NextRequest) {
     const data = await paxos.get('/transfer/monitoring-addresses', params);
     return NextResponse.json(data);
   } catch (error: any) {
+    // Paxos sandbox may not support monitoring addresses — return empty list
+    if (error.status === 404) {
+      return NextResponse.json({ items: [] });
+    }
     return NextResponse.json(
       { error: error.message || 'Internal server error', details: error },
       { status: error.status || 500 }
@@ -26,6 +30,12 @@ export async function POST(request: NextRequest) {
     const data = await paxos.post('/transfer/monitoring-addresses', body);
     return NextResponse.json(data, { status: 201 });
   } catch (error: any) {
+    if (error.status === 404) {
+      return NextResponse.json(
+        { error: 'Monitoring addresses are not available in sandbox mode. This feature works in production.' },
+        { status: 400 }
+      );
+    }
     return NextResponse.json(
       { error: error.message || 'Internal server error', details: error },
       { status: error.status || 500 }

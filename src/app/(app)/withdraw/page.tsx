@@ -30,6 +30,7 @@ import { Button } from '@/components/ui/Button';
 import { Skeleton } from '@/components/ui/Skeleton';
 import { Badge } from '@/components/ui/Badge';
 import { Modal } from '@/components/ui/Modal';
+import { useStore } from '@/store/useStore';
 
 /* ──────────────────────────── Constants ──────────────────────────── */
 
@@ -244,6 +245,7 @@ export default function WithdrawPage() {
 
 function CryptoWithdrawTab() {
   const queryClient = useQueryClient();
+  const profileId = useStore((s) => s.activeProfile?.id);
 
   const [selectedAsset, setSelectedAsset] = useState<Asset | ''>('');
   const [selectedNetwork, setSelectedNetwork] = useState<string>('');
@@ -348,23 +350,28 @@ function CryptoWithdrawTab() {
       // Save address if requested
       if (saveAddress && addressNickname) {
         fetch('/api/paxos/crypto-destination-addresses', {
-          method: 'PUT',
+          method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
+            profile_id: profileId,
             address: destinationAddress,
             crypto_network: selectedNetwork,
             asset: selectedAsset,
             name: addressNickname,
           }),
         })
-          .then(() => {
+          .then(async (res) => {
+            if (!res.ok) {
+              const err = await res.json().catch(() => ({}));
+              throw new Error(err.error || 'Failed to save address');
+            }
             toast.success('Address saved!');
             queryClient.invalidateQueries({
               queryKey: ['crypto-destination-addresses'],
             });
           })
-          .catch(() => {
-            toast.error('Failed to save address');
+          .catch((err) => {
+            toast.error(err.message || 'Failed to save address');
           });
       }
     },

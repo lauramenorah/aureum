@@ -201,7 +201,7 @@ function normalizeConversions(
   return conversions.map((c) => ({
     id: c.id,
     type: 'conversion' as const,
-    asset: `${c.from_asset} > ${c.to_asset}`,
+    asset: `${c.source_asset || c.from_asset} > ${c.target_asset || c.to_asset}`,
     amount: c.amount,
     usdValue: c.amount,
     status: c.status,
@@ -209,8 +209,8 @@ function normalizeConversions(
     direction: 'neutral' as const,
     details: {
       'Conversion ID': c.id,
-      'From Asset': c.from_asset,
-      'To Asset': c.to_asset,
+      'From Asset': c.source_asset || c.from_asset || '',
+      'To Asset': c.target_asset || c.to_asset || '',
       Amount: c.amount,
       Status: c.status,
       'Created At': new Date(c.created_at).toLocaleString(),

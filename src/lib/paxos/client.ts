@@ -24,7 +24,8 @@ class PaxosClient {
 
     if (!res.ok) {
       const error = await res.json().catch(() => ({ message: res.statusText }));
-      throw { status: res.status, ...error };
+      const message = error.detail || error.message || error.title || res.statusText;
+      throw { status: res.status, message, ...error };
     }
 
     if (res.status === 204) return {} as T;
