@@ -15,11 +15,11 @@ interface StoredUser {
 }
 
 // Attach to globalThis so the store survives Next.js HMR in dev mode
-const globalForAuth = globalThis as unknown as { __neobank_users: Map<string, StoredUser> };
-if (!globalForAuth.__neobank_users) {
-  globalForAuth.__neobank_users = new Map();
+const globalForAuth = globalThis as unknown as { __aureum_users: Map<string, StoredUser> };
+if (!globalForAuth.__aureum_users) {
+  globalForAuth.__aureum_users = new Map();
 }
-const users = globalForAuth.__neobank_users;
+const users = globalForAuth.__aureum_users;
 
 export function getUser(email: string): StoredUser | undefined {
   return users.get(email);

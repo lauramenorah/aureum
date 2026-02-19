@@ -119,7 +119,7 @@ export default function DeniedPage() {
           Update & Resubmit
         </button>
         <button
-          onClick={() => window.open('mailto:support@neobank.com', '_blank')}
+          onClick={() => window.open('mailto:support@aureum.com', '_blank')}
           className="flex-1 border border-[rgba(255,255,255,0.06)] text-[#8892B0] font-semibold rounded-xl py-3.5 hover:bg-[#1B1E36] hover:text-white transition-colors"
         >
           Contact Support

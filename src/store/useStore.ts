@@ -43,6 +43,6 @@ export const useStore = create<AppState>()(
       toggleSidebar: () => set((state) => ({ isSidebarOpen: !state.isSidebarOpen })),
       setSidebarOpen: (open) => set({ isSidebarOpen: open }),
     }),
-    { name: 'neobank-store' }
+    { name: 'aureum-store' }
   )
 );

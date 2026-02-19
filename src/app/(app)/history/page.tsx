@@ -484,7 +484,7 @@ export default function HistoryPage() {
     }
     const csv = generateCSV(filteredTransactions);
     const date = new Date().toISOString().split('T')[0];
-    downloadCSV(csv, `neobank-history-${date}.csv`);
+    downloadCSV(csv, `aureum-history-${date}.csv`);
     toast.success(
       `Exported ${filteredTransactions.length} transactions`
     );

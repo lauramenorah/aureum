@@ -42,7 +42,7 @@ export default function Sidebar() {
       {/* Brand */}
       <div className="flex h-16 items-center px-6">
         <span className="bg-gradient-to-r from-accent-purple to-accent-violet bg-clip-text text-xl font-bold text-transparent">
-          NeoBank
+          Aureum
         </span>
       </div>
 

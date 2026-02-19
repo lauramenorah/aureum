@@ -16,7 +16,7 @@ test.describe('Onboarding Flow', () => {
   });
 
   test('welcome page renders correctly', async ({ page }) => {
-    await expect(page.getByText('NeoBank')).toBeVisible();
+    await expect(page.getByText('Aureum')).toBeVisible();
     await expect(page.getByText(/Welcome|Get Started/i)).toBeVisible();
   });
 

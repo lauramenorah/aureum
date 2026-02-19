@@ -108,7 +108,7 @@ export const useOnboardingStore = create<OnboardingState>()(
       reset: () => set({ currentStep: 1, identityType: 'PERSON', personInfo: initialPersonInfo, institutionInfo: initialInstitution, address: initialAddress, taxInfo: initialTaxInfo, documents: initialDocs, termsAccepted: false, identityId: null, accountId: null, profileId: null }),
     }),
     {
-      name: 'neobank-onboarding',
+      name: 'aureum-onboarding',
       partialize: (state) => {
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const { documents, ...rest } = state;

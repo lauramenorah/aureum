@@ -8,8 +8,8 @@ import { ToastProvider } from '@/components/ui/Toast';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
-  title: 'NeoBank — Crypto Neobank Powered by Paxos',
-  description: 'Buy, sell, and manage crypto assets with NeoBank. Powered by Paxos infrastructure.',
+  title: 'Aureum — Modern Crypto Banking Powered by Paxos',
+  description: 'Buy, sell, and manage crypto assets with Aureum. Powered by Paxos infrastructure.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

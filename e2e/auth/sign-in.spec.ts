@@ -6,7 +6,7 @@ test.describe('Sign In Page', () => {
   });
 
   test('renders the sign-in form', async ({ page }) => {
-    await expect(page.getByRole('heading', { name: 'NeoBank' })).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'Aureum' })).toBeVisible();
     await expect(page.getByText('Sign in to your account')).toBeVisible();
     await expect(page.getByLabel('Email')).toBeVisible();
     await expect(page.getByLabel('Password')).toBeVisible();

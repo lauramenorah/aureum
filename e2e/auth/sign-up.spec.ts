@@ -6,7 +6,7 @@ test.describe('Sign Up Page', () => {
   });
 
   test('renders the sign-up form', async ({ page }) => {
-    await expect(page.getByRole('heading', { name: 'NeoBank' })).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'Aureum' })).toBeVisible();
     await expect(page.getByText('Create your account')).toBeVisible();
     await expect(page.getByLabel('Full Name')).toBeVisible();
     await expect(page.getByLabel('Email')).toBeVisible();

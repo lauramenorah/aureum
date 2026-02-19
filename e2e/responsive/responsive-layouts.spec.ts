@@ -77,7 +77,7 @@ test.describe('Responsive Layouts - Tablet', () => {
     await page.goto('/dashboard');
     // Sidebar shows at md breakpoint (768px)
     await expect(page.locator('aside')).toBeVisible();
-    await expect(page.getByText('NeoBank')).toBeVisible();
+    await expect(page.getByText('Aureum')).toBeVisible();
   });
 
   test('trade page renders on tablet', async ({ page }) => {
@@ -96,7 +96,7 @@ test.describe('Responsive Layouts - Desktop', () => {
   test('dashboard renders with sidebar on desktop', async ({ page }) => {
     await page.goto('/dashboard');
     await expect(page.locator('aside')).toBeVisible();
-    await expect(page.getByText('NeoBank')).toBeVisible();
+    await expect(page.getByText('Aureum')).toBeVisible();
     await expect(page.getByText('Portfolio Value')).toBeVisible({ timeout: 10_000 });
   });
 

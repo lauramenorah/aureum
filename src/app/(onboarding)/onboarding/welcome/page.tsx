@@ -49,7 +49,7 @@ export default function WelcomePage() {
         transition={{ duration: 0.6 }}
         className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-[#7B5EA7] to-[#9B59F5] bg-clip-text text-transparent mb-4"
       >
-        NeoBank
+        Aureum
       </motion.h1>
 
       {/* Tagline */}
@@ -59,7 +59,7 @@ export default function WelcomePage() {
         transition={{ duration: 0.6, delay: 0.3 }}
         className="text-[#8892B0] text-lg md:text-xl mb-12 text-center"
       >
-        Your crypto neobank. Powered by Paxos.
+        Modern crypto banking. Powered by Paxos.
       </motion.p>
 
       {/* Feature Cards */}

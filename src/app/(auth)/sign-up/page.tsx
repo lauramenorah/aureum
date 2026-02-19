@@ -78,7 +78,7 @@ export default function SignUpPage() {
         {/* Logo */}
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold bg-gradient-to-r from-[#7B5EA7] to-[#9B59F5] bg-clip-text text-transparent">
-            NeoBank
+            Aureum
           </h1>
           <p className="text-[#8892B0] mt-2 text-sm">
             Create your account
